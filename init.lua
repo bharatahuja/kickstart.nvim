@@ -161,8 +161,9 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
--- Delete to the void, courtesy of The Primeagen
+-- Delete to the void and greatest keymap ever, courtesy of The Primeagen
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
+vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
